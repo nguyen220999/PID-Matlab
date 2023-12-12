@@ -1,0 +1,35 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "pid_C2000"};
+	this.sidHashMap["pid_C2000"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<Root>/Add"] = {sid: "pid_C2000:21"};
+	this.sidHashMap["pid_C2000:21"] = {rtwname: "<Root>/Add"};
+	this.rtwnameHashMap["<Root>/Add1"] = {sid: "pid_C2000:41"};
+	this.sidHashMap["pid_C2000:41"] = {rtwname: "<Root>/Add1"};
+	this.rtwnameHashMap["<Root>/Kd"] = {sid: "pid_C2000:23"};
+	this.sidHashMap["pid_C2000:23"] = {rtwname: "<Root>/Kd"};
+	this.rtwnameHashMap["<Root>/Ki"] = {sid: "pid_C2000:22"};
+	this.sidHashMap["pid_C2000:22"] = {rtwname: "<Root>/Ki"};
+	this.rtwnameHashMap["<Root>/Kp"] = {sid: "pid_C2000:20"};
+	this.sidHashMap["pid_C2000:20"] = {rtwname: "<Root>/Kp"};
+	this.rtwnameHashMap["<Root>/PWM"] = {sid: "pid_C2000:13"};
+	this.sidHashMap["pid_C2000:13"] = {rtwname: "<Root>/PWM"};
+	this.rtwnameHashMap["<Root>/Product"] = {sid: "pid_C2000:30"};
+	this.sidHashMap["pid_C2000:30"] = {rtwname: "<Root>/Product"};
+	this.rtwnameHashMap["<Root>/QEP"] = {sid: "pid_C2000:58"};
+	this.sidHashMap["pid_C2000:58"] = {rtwname: "<Root>/QEP"};
+	this.rtwnameHashMap["<Root>/Scope"] = {sid: "pid_C2000:60"};
+	this.sidHashMap["pid_C2000:60"] = {rtwname: "<Root>/Scope"};
+	this.rtwnameHashMap["<Root>/di t"] = {sid: "pid_C2000:26"};
+	this.sidHashMap["pid_C2000:26"] = {rtwname: "<Root>/di t"};
+	this.rtwnameHashMap["<Root>/rpm"] = {sid: "pid_C2000:7"};
+	this.sidHashMap["pid_C2000:7"] = {rtwname: "<Root>/rpm"};
+	this.rtwnameHashMap["<Root>/t"] = {sid: "pid_C2000:24"};
+	this.sidHashMap["pid_C2000:24"] = {rtwname: "<Root>/t"};
+	this.rtwnameHashMap["<Root>/velo_desire rpm"] = {sid: "pid_C2000:9"};
+	this.sidHashMap["pid_C2000:9"] = {rtwname: "<Root>/velo_desire rpm"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
